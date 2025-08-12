@@ -27,10 +27,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div 
+          <motion.a 
             whileHover={{ scale: 1.05 }}
+            href="#top"
+            aria-label="ServiSwiss AI Home"
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">S</span>
@@ -39,7 +44,7 @@ const Navbar = () => {
               <span className="text-gray-900 font-bold text-xl">ServiSwiss AI</span>
               <div className="text-xs text-gray-500 font-medium">Geneva's Smart Platform</div>
             </div>
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -100,7 +105,7 @@ const Navbar = () => {
               className="flex items-center space-x-2 text-gray-700"
             >
               <Phone size={16} />
-              <span className="text-sm font-medium">+41 22 XXX-XXXX</span>
+              <a href="tel:+4122XXXXXXX" className="text-sm font-medium">+41 22 XXX-XXXX</a>
             </motion.div>
 
             {isAuthenticated ? (

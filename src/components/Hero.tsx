@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Sparkles, Zap } from 'lucide-react';
@@ -171,7 +170,10 @@ const Hero = () => {
             muted
             loop
             playsInline
+            preload="metadata"
+            poster="https://images.pexels.com/photos/4109209/pexels-photo-4109209.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080"
             crossOrigin="anonymous"
+            aria-hidden="true"
             onLoadedData={handleVideoLoad}
             onError={handleVideoError}
           >

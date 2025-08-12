@@ -57,11 +57,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone size={16} />
-                <span>+41 22 XXX-XXXX</span>
+                <a href="tel:+4122XXXXXXX" className="hover:text-white">+41 22 XXX-XXXX</a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={16} />
-                <span>booking@serviswiss.ai</span>
+                <a href="mailto:booking@serviswiss.ai" className="hover:text-white">booking@serviswiss.ai</a>
               </div>
             </div>
           </div>

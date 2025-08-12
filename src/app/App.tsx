@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import ServiceSelection from '../features/services/components/ServiceSelection';
@@ -13,19 +12,24 @@ import BookingDashboard from '../features/bookings/components/BookingDashboard';
 
 function App() {
   return (
-    <div className="bg-white min-h-screen">
+    <div id="top" className="bg-white min-h-screen">
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white px-3 py-2 rounded">
+        Skip to content
+      </a>
       <Navbar />
-      <Hero />
-      <ServiceSelection />
-      <BookingProcess />
-      <ValueProposition />
-      <TrustSection />
-      <BookingWorkflow />
-      <ContactSupport />
-      <FinalCTA />
-      <div id="bookings">
-        <BookingDashboard />
-      </div>
+      <main id="main" role="main">
+        <Hero />
+        <ServiceSelection />
+        <BookingProcess />
+        <ValueProposition />
+        <TrustSection />
+        <BookingWorkflow />
+        <ContactSupport />
+        <FinalCTA />
+        <div id="bookings">
+          <BookingDashboard />
+        </div>
+      </main>
       <Footer />
     </div>
   );
