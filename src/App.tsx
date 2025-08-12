@@ -9,6 +9,7 @@ import BookingWorkflow from './components/BookingWorkflow';
 import ContactSupport from './components/ContactSupport';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import BookingDashboard from './components/BookingDashboard';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
       <BookingWorkflow />
       <ContactSupport />
       <FinalCTA />
+      <div id="bookings">
+        <BookingDashboard />
+      </div>
       <Footer />
     </div>
   );
