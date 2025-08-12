@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Globe, Phone, User, LogOut } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
-import AuthModal from './AuthModal';
+import AuthModal from '../features/auth/components/AuthModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

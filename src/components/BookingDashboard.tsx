@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, AlertCircle, Phone, Mail, MapPin, CreditCard } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
-import { getUserBookings, Booking, BookingService } from '../lib/supabase';
+import { getUserBookings } from '../shared/api/supabase/bookings';
+import type { Booking, BookingService } from '../shared/api/supabase/types';
 
 const BookingDashboard = () => {
   const { user, isAuthenticated } = useAuth();

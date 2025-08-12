@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Mail, Phone, MessageSquare, CheckCircle, Clock, X, Plus, Trash2, ChevronDown, ChevronUp, Smartphone, Folder, FolderOpen } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
-import { getServices, getServiceCategories, createBooking, Service as DBService, ServiceCategory } from '../lib/supabase';
-import AuthModal from './AuthModal';
+import { getServices, getServiceCategories } from '../shared/api/supabase/catalog';
+import { createBooking } from '../shared/api/supabase/bookings';
+import type { Service as DBService, ServiceCategory } from '../shared/api/supabase/types';
+import AuthModal from '../features/auth/components/AuthModal';
 import {
   DndContext,
   closestCenter,
